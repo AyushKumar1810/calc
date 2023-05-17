@@ -1,0 +1,204 @@
+
+:root{
+    --left-keypad-button-width: 60px;
+    --right-keypad-button-width: 60px;
+    --keypad-button-height: 32px;
+    --equal-key-button-width: 153px;
+    --button-padding: 6px 15px;
+    --main-calculator-padding: 15px 20px;
+    --calculator-screen-padding: 10px 15px;
+    --problem-screen-font-size: 30px;
+    --second-screen-font-size: 20px;
+    --button-font-size: 17px;
+    --calculator-screen-bottom-margin: 15px;
+}
+html , body{
+    font-family: system-ui;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(45deg,#FBEBEB,#EDEBFB,#EBFBED,#FBEBEB);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.CalculatorContainer{
+    margin: 10px;
+}
+.MainCalculator{
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    padding: var(--main-calculator-padding) ;
+    background: linear-gradient(135deg,#2C2D2B,#F2B7B0,#86EAE4,#A12958,#3FCE24 );
+    box-shadow: 8px -8px 12px 0 rgba(0, 0, 0, 0.3),-12px 12px 16px rgba(255, 255, 255, 0.25);
+    /* background: white; */
+}
+
+.CalculatorScreen2{
+    border-radius: 15px;
+    background: #F3F7F2;
+    margin: 5px;
+    margin-bottom: var(--calculator-screen-bottom-margin);
+}
+
+.CalculatorScreen{
+    padding: var(--calculator-screen-padding) ;
+    border-radius: 15px;
+    background: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+    box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3),12px 12px 16px rgba(255, 255, 255, 0.25);
+    overflow-x: hidden;
+}
+#SecondScreen{
+    text-align: right;
+    font-size: var(--second-screen-font-size);
+}
+.Brand{
+    float: left;
+    font-style: italic;
+    color: #B7B2B3;
+    font-size: 18px;
+    user-select: none;
+}
+#ProblemScreen{
+    text-align: right;
+    font-size: var(--problem-screen-font-size);
+}
+.CalculatorKeypad{
+    display: flex;
+    flex-direction: row;
+}
+.LeftSidePart , .RightSidePart{
+    display: flex;
+    margin: 3px;
+    flex-direction: column;
+}
+.LeftSidePart{
+    /* background: #afd275; */
+    background: linear-gradient(rgba(240, 243, 231,0.6),rgba(231, 231, 231,0.6),rgba(240, 243, 231,0.6));
+    border-radius: 20px;
+    box-shadow:-8px 8px 12px 0 rgba(0, 0, 0, 0.3),12px -12px 16px rgba(255, 255, 255, 0.25);
+}
+.RightSidePart{
+    background: linear-gradient(rgba(240, 243, 231,0.6),rgba(231, 231, 231,0.6),rgba(240, 243, 231,0.6));
+    border-radius: 20px;
+    box-shadow:-8px 8px 12px 0 rgba(0, 0, 0, 0.3),12px -12px 16px rgba(255, 255, 255, 0.25);
+}
+.LeftKeypadRow , .RightKeypadRow{
+    display: flex;
+    flex-direction: row;
+}
+.LeftKeypadRow div{
+    width: var(--left-keypad-button-width);
+    height: var(--keypad-button-height);
+    margin: 3px;
+    padding: var(--button-padding);
+    border: 0px solid black;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+    font-size: var(--button-font-size);
+    box-shadow: 0 3px 5px gray;
+    cursor: pointer;
+    background: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),-8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    outline: none;
+    transition: 0.2s;
+    user-select: none;
+}
+.LeftKeypadRow div:hover{
+    background: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+    transform: scale(1.1);
+}
+.LeftKeypadRow div:active{
+    background: linear-gradient(135deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+    box-shadow: inset 2px 0 5px gray;
+}
+.LeftKeypadRow1 div ,.LeftKeypadRow .NormalSignBtn{
+    background: linear-gradient(90deg,#696968,#2F2F2E ,#696968);
+    color: white;
+    box-shadow: 0 2px 5px gray;
+}
+.LeftKeypadRow1 div:hover,.LeftKeypadRow .NormalSignBtn:hover{
+    background: radial-gradient(#1F1F1f,#2F2F3E,#3F3F3E ,#696968);
+    padding: 8px 17px;
+    margin:1px;
+}
+.LeftKeypadRow .EqualKey{
+    width: var(--equal-key-button-width);
+    background: linear-gradient(45deg,#EC4F3A,blue,#EC4F3A);
+    color: white;
+    font-size: 25px;
+}
+.LeftKeypadRow .EqualKey:hover{
+    background: linear-gradient(135deg,#EC4F3A,blue,#EC4F3A);
+}
+.RightKeypadRow div{
+    width: var(--right-keypad-button-width);
+    height: var(--keypad-button-height);
+    margin: 3px;
+    padding: var(--button-padding);
+    border: 0px solid black;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+    font-size: var(--button-font-size);
+    cursor: pointer;
+    box-shadow: 0 2px 5px gray;
+    background: linear-gradient(-45deg,rgba(255,255,255,0.35), rgba(0,0,0,0.4), rgba(255,255,255,0.35));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(200, 255, 255, 0.3);
+    /* background: white; */
+    color: white;
+    transition: 0.2s;
+    user-select: none;
+}
+.RightKeypadRow div:hover{
+    transform: scale(1.1);
+}
+.RightKeypadRow div:active{
+    box-shadow: inset 2px 0 5px gray;
+}
+#CeKey, #CKey{
+    color: #C50315;
+    font-weight: 600;
+}
+@media only screen and (max-width: 900px) {
+    :root{
+        --calculator-screen-bottom-margin: 20px;
+    }
+    .CalculatorKeypad{
+        display: flex;
+        flex-direction: column;
+    }  
+}
+@media only screen and (max-width: 550px) {
+    :root{
+        --main-calculator-padding: 22px 25px;
+        --left-keypad-button-width: 50px;
+        --right-keypad-button-width: 50px;
+        --keypad-button-height: 29px;
+        --equal-key-button-width: 127px;
+        --button-padding: 7px 12px;
+        --problem-screen-font-size: 27px;
+        --second-screen-font-size: 18px;
+        --button-font-size: 15px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    :root{
+        --main-calculator-padding: 20px 22px;
+        --left-keypad-button-width: 40px;
+        --right-keypad-button-width: 40px;
+        --keypad-button-height: 24px;
+        --equal-key-button-width: 103px;
+        --button-padding: 4px 10px;
+        --problem-screen-font-size: 25px;
+        --second-screen-font-size: 18px;
+        --button-font-size: 14px;
+    }
+}
+
